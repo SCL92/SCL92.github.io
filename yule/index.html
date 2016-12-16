@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html style="overflow: hidden;">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/mTween2.js"></script>
+		<script type="text/javascript" src="js/tree.js"></script>
+		<script type="text/javascript" src="js/index1.js"></script>
+		
+	</head>
+	<body style="overflow: hidden;">
+		<div id="lodingBox" style="overflow: hidden;">
+			<img src="img/loding1.jpg" id="loding" />
+			<div id="lodingNum"></div>
+		</div>
+		<!--页面-->
+		<section id="box">
+			<!--头部-->
+			<header class="head clearfix" style="display: block;">
+				<div class="log fl">
+					<img src="img/log2.png" alt="时尚" />
+					<span>私订</span>
+				</div>
+				
+				<div class="fr">
+					<ul class="navlist fl">
+						<li>
+							<a href="" class="navtext">首页</a>
+							<span class="navline"></span>
+						</li>
+						<li>
+							<a href="" class="navtext">服务</a>
+							<span class="navline"></span>
+						</li>
+						<li>
+							<a href="" class="navtext">优势</a>
+							<span class="navline"></span>
+						</li>
+						<li>
+							<a href="" class="navtext">体验</a>
+							<span class="navline"></span>
+						</li>
+						<li>
+							<a href="" class="navtext">案例</a>
+							<span class="navline"></span>
+						</li>
+						<li>
+							<a href="" class="navtext">新闻</a>
+							<span class="navline"></span>
+						</li>
+						<li>
+							<a href="" class="navtext">关于</a>
+							<span class="navline"></span>
+						</li>
+						<li>
+							<a href="" class="navtext">联络</a>
+							<span class="navline"></span>
+						</li>
+				</ul>
+				<div class="nav fl">
+					<div class="navline1"></div>
+					<div class="navline2"></div>
+					<div class="navline3"></div>
+					</div>
+				</div>
+				<ul class="navmine">
+					<li><a>首页</a></li>
+					<li><a>服务</a></li>
+					<li><a>优势</a></li>
+					<li><a>体验</a></li>
+					<li><a>案例</a></li>
+					<li><a>流程</a></li>
+					<li><a>新闻</a></li>
+					<li><a>关于</a></li>
+					<li><a>流程</a></li>
+				</ul>
+			</header>
+			<!--头部end-->
+			<!--页面主体可视区宽高 -->
+			<div class="mine">
+				<!--高100%-->
+				<div class="content">
+					<!--第一屏-->
+					<div class="one hid">
+						<ul class="bannerBtn"></ul>
+						<ul class="bannerbox">
+							<!--大屏切换-->
+							<li class="banner1Box">
+								<img src="img/banner2.png" class="banner1"></img>
+							</li>
+							<li class="banner2Box">
+								<img src="img/banner1.png" class="banner1"></img>
+							</li>
+						</ul>
+					</div>
+					<!--第一屏end-->
+					<!--第二屏-->
+					<div class="two hid">
+						<ul class="messageList">
+							<li class="messageBox">
+								<div class="messagePic1"></div>
+								<div class="messageText">
+									<a href="index.html" class="green">了解详情</a>
+								</div>
+
+							</li>
+							<li class="messageBox">
+								<div class="messagePic2"></div>
+								<div class="messageText">
+									<a href="index.html" class="pup">了解详情</a>
+								</div>
+
+							</li>
+							<li class="messageBox">
+								<div class="messagePic3"></div>
+								<div class="messageText">
+									<a href="index.html" class="red">了解详情</a>
+								</div>
+
+							</li>
+							<li class="messageBox">
+								<div class="messagePic4"></div>
+								<div class="messageText">
+									<a href="index.html" class="blue">了解详情</a>
+								</div>
+
+							</li>
+						</ul>
+						
+					</div>
+					<!--第二屏end-->
+					<!--第三屏-->
+					<div class="three hid">
+						<div class="caseBox">
+							<header class="caseHead">
+								<h1><span>--</span> 案例欣赏 <span>--</span></h1>
+								<p>CASES</p>
+								<div class="casePreBtn">
+									<div></div>
+									<a>※</a>
+								</div>
+								<div class="caseNexBtn">
+									<div></div>
+									<a>...</a>
+								</div>
+							</header>
+							<ul class="caseContent clearfix">
+								<li>
+									<img src="img/case1.jpg" class="casePic" />
+									<img src="img/play1.jpg" class="casePic2" />
+								</li>
+								<li>
+									<img src="img/case2.jpg" class="casePic" />
+									<img src="img/play2.jpg" class="casePic2" />
+								</li>
+								<li>
+									<img src="img/case3.jpg" class="casePic" />
+									<img src="img/play3.jpg" class="casePic2" />
+								</li>
+								<li>
+									<img src="img/case4.jpg" class="casePic" />
+									<img src="img/play4.jpg" class="casePic2" />
+								</li>
+								<li>
+									<img src="img/case5.jpg" class="casePic" />
+									<img src="img/play5.jpg" class="casePic2" />
+								</li>
+								<li>
+									<img src="img/case6.jpg" class="casePic" />
+									<img src="img/play6.jpg" class="casePic2" />
+								</li>
+								<li>
+									<img src="img/case7.jpg" class="casePic" />
+									<img src="img/play7.jpg" class="casePic2" />
+								</li>
+								<li>
+									<img src="img/case8.jpg" class="casePic" />
+									<img src="img/play8.jpg" class="casePic2" />
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					<!--第三屏end-->
+					<!--第四屏star-->
+					<div class="four hid">
+						<div class="advantage">
+							<header class="advantageHead">
+								<h1><span>--</span> 我们的优势  <span>--</span></h1>
+								<p>ADVANTAGE</p>
+							</header>
+							<ul class="advantageContent">
+								<li>
+									<div>
+										<img src="img/advantage1.jpg"/>
+									</div>
+									<div class="advantageText">
+										<h1>零风险合作</h1>
+										<p>
+											设计稿第一稿如您提出不满意
+              								我们全额退款，打消您的一切顾虑</br>
+              								不限修改次数直到您满意为止..
+										</p>
+									</div>
+								</li>
+								<li>
+									<div>
+										<img src="img/advantage2.jpg"/>
+									</div>
+									<div class="advantageText">
+										<h1>百分百原创设计</h1>
+										<p>
+											我们秉承独一无二的原则
+									                    通过与您有效的沟通</br>
+									                    精心为您策划、设计、开发
+										</p>
+									</div>
+								</li>
+								<li>
+									<div>
+										<img src="img/advantage3.jpg"/>
+									</div>
+									<div class="advantageText">
+										<h1>重视用户体验</h1>
+										<p>
+									                    在满足用户需求的前提下
+									                    视觉舒适、交互友好、操作简洁<br/>
+									                    将用户体验做到极致
+										</p>
+									</div>
+								</li>
+								<li>
+									<div>
+										<img src="img/advantage4.jpg"/>
+									</div>
+									<div class="advantageText">
+										<h1>贴心的技术支持</h1>
+										<p>
+									                    善始善终是我们的原则
+									                    我们时刻守护在您的身边<br/>
+									                    随时帮您排忧解难
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--第四屏end-->
+					<!--第五屏str-->
+					
+					<div class="five hid">
+						<div class="process">
+							<header class="advantageHead">
+								<h1><span>--</span> 服务流程 <span>--</span></h1>
+								<p>HOW TO START</p>
+							</header>
+							<div class="processContent">
+								<div class="processText">
+									<div class="processNum">1</div>
+									<ul class="processTxt">
+										<li class="processDesBox">
+											<h1>前期沟通</h1>
+											<p>我们会与您预约时间沟通明确项目的类型、规模、需求、价格，树立合作意向</p>
+										</li>
+										<li class="processDesBox">
+											<h1>签订合同</h1>
+											<p>项目正式启动，我们会需要您提供项目相关资料包含但不限于企业Logo、企业VI、企业介绍、产品介绍……等图片、文字、视频资料。</p>
+										</li><li class="processDesBox">
+											<h1>页面设计</h1>
+											<p>根据需求安排专属设计师与您一对一沟通，无限次修改设计稿直到您满意</p>
+										</li>
+										</li>
+										<li class="processDesBox">
+											<h1>程序开发</h1>
+											<p>严格按照设计定稿进行前台与后台的程序编写达到功能要求的同时优化代码，增强用户体验，兼顾SEO规则</p>
+										</li>
+										<li class="processDesBox">
+											<h1>审核验收</h1>
+											<p>通过我们提供的网址进行项目测试和浏览体验，进一步排查程序漏洞和完善细节问题，我们能做到的是超预期效果</p>
+										</li>
+										<li class="processDesBox">
+											<h1>售后维护</h1>
+											<p>项目完成但并不代表着完结，我们能够为您提供终身技术支持以及功能的扩展，体现定制化的优势</p>
+										</li>
+									</ul>
+								</div>
+								<div class="processDes">
+									<ul class="clearfix">
+										<li>
+											<div class="process_ico processPic1"></div>
+											<p class="processHtml">前期沟通</p>
+										</li>
+										<li>
+											<div class="process_ico processPic2"></div>
+											<p class="processHtml">签订合同</p>
+										</li>
+										<li>
+											<div class="process_ico processPic3"></div>
+											<p class="processHtml">页面设计</p>
+										</li>
+										<li>
+											<div class="process_ico processPic4"></div>
+											<p class="processHtml">程序开发</p>
+										</li>
+										<li>
+											<div class="process_ico processPic5"></div>
+											<p class="processHtml">审核验证</p>
+										</li>
+										<li>
+											<div class="process_ico processPic6"></div>
+											<p class="processHtml">售后维修</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--第五屏end-->
+					<!--第六屏str-->
+					<div class="six hid">
+						<div class="init">
+							<header class="initHead">
+								<h1>博文 公告</h1>
+								<p>ARTICLE NOTICE</p>
+								<div class="casePreBtn">
+									<div></div>
+									<a>※</a>
+								</div>
+								<div class="caseNexBtn">
+									<div></div>
+									<a>...</a>
+								</div>
+								<div class="circle">讯</div>
+								<div class="initLine"></div>
+							</header>
+							<div class="initContent clearfix">
+								<div class="initl fl">
+									<ul class="initlList">
+										<li class="clearfix">
+											<h1 class="initTitle">2015-07-28</h1>
+											<p class="initText">手机网站建设的优势<span class="initico">></span></p>
+										</li>
+										<li class="clearfix">
+											<h1 class="initTitle">2015-07-28</h1>
+											<p class="initText">网站建设的八大色彩<span class="initico">></span></p>
+										</li>
+										<li class="clearfix">
+											<h1 class="initTitle">2015-07-28</h1>
+											<p class="initText">说说网站建设的流行趋势扁平化设<span class="initico">></span></p>
+										</li>
+										<li class="clearfix">
+											<h1 class="initTitle">2015-07-28</h1>
+											<p class="initText">威智网络讲述企业建网站的目的<span class="initico">></span></p>
+										</li>
+										
+									</ul>
+								</div>
+								<div class="initr fr">
+									<ul class="initrList">
+										<li class="clearfix">
+											<h1 class="initTitle">2015-07-28</h1>
+											<p class="initText">手机网站建设的优势<span class="initico"><</span></p>
+										</li><li class="clearfix">
+											<h1 class="initTitle">2015-07-28</h1>
+											<p class="initText">手机网站建设的优势<span class="initico"><</span></p>
+										</li>
+										<li class="clearfix">
+											<h1 class="initTitle">2015-07-28</h1>
+											<p class="initText">手机网站建设的优势<span class="initico"><</span></p>
+										</li>
+									
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--第六屏end-->
+					<!--footer:str-->
+					<footer class="foot hid">
+						<header class="advantageHead">
+								<h1><span>--</span> 联系我们 <span>--</span></h1>
+								<p>CONTACH</p>
+						</header>
+						<ul class="massageList">
+							<li class="item">
+								<div>您的需求 ？</div>
+								<div class="needlist">企业宣传,营销网站定制<span class="needline"></span></div>
+								<ul class="massagefirm">
+									<li>企业宣传、营销网站定制</li>
+									<li>集团官网高级定制</li>
+									<li>电子商务、交互式平台开发</li>
+									<li>手机网站、微信二次开发</li>
+									<li>IOS、安卓APP</li>
+									<li>其他</li>
+								</ul>
+							</li>
+							<li class="item">
+								<div>如何称呼您 ？</div>
+								<div class="needlist2"><input type="text" placeholder="您的姓氏" class="name"/><span class="needsex">先生</span></div>
+							</li>
+							<li class="item">
+								<div>如何联系您 ？</div>
+								<div class="needlist3"><input type="text" placeholder="您的手机" class="phonenum"/></div>
+							</li>
+						</ul>	
+						<div style="display: flex;">
+							<div class="infosub">><div class="infostyle"></div><a class="infotext">提交</a></div>
+						</div>
+						<ul class="companyinfo">
+							<li>
+								<div></div>
+								<p>北京**科技有限公司</p>
+								<p>地址：北京市海淀区，西二旗</p>
+								<p>邮箱：18295808477@163.com</p>
+							</li>
+							<li>
+								<div></div>
+								<p>北京**科技有限公司</p>
+								<p>地址：北京市海淀区</p>
+								<p>邮箱：18295808477@163.com</p>
+							</li>
+							<li>
+								<div></div>
+								<p>北京**科技有限公司</p>
+								<p>地址：北京市海淀区</p>
+								<p>邮箱：18295808477@163.com</p>
+							</li>
+						</ul>
+						<div class="copyright">版权所有：北京余乐科技有限公司 Copyright © 2012-2016 yule.com京ICP备12045176号-1 console.log("dddddd")</div>
+					</footer>
+					<!--footer:end-->
+				</div>
+				
+			</div>
+			
+			
+		</section>
+		
+		
+	</body>
+</html>
