@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		p{
+			margin: 0;
+		}
+			#box,#box2{
+				width: 300px;
+				height: 200px;
+				border: 2px solid red;
+				float: left;
+				border-radius: 10px;
+				font-family: "微软雅黑";
+				font-weight:bold;
+				/*text-indent: 40px;*/
+			}
+			#box{
+				color: purple;
+			}
+			#box2{
+				color: dodgerblue;
+			}
+			
+			input{
+				float:left;
+				margin: 50px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+			<input type="button" value="开始" />
+		<div id="box2"></div>
+	</body>
+	<script>
+		var box=document.getElementById("box");
+		var box2=document.getElementById("box2");
+		var btn=document.getElementsByTagName("input")[0];
+		var onOff=false;
+		var str="";
+		var num=0;
+		var time=null;
+		str=" 匆匆那年我们究竟说了几遍再见之后 再拖延可惜谁有没有 爱过不是一场七情上面的雄辩匆匆那年我们 一时匆忙撂下难以承受的诺言只有等别人兑现不怪那吻痕 还没积累成茧拥抱着冬眠 也没能羽化再成仙不怪这一段情没空反复再排练是岁月宽容恩赐 反悔的时间如果再见不能红着眼 是否还能红着脸就像那年匆促刻下永远一起那样美丽的谣言"
+		box.innerHTML=str;
+		btn.onclick = function(){
+			if(onOff){
+				btn.value="开始";
+				clearInterval(time);
+				onOff=false;
+			}else{
+				btn.value="停止";
+				time = setInterval(move,30)			
+				onOff=true;
+			}
+		}
+		
+		function move(){
+			num++;
+			if(num==str.length){
+				clearInterval(time);
+			}
+			box.innerHTML = str.substring(num,str.length)
+			box2.innerHTML = str.substring(0,num)
+			console.log(num)
+		}
+		
+	</script>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/public.js"></script>
+		<script src="js/mTween2.js"></script>
+		<style>
+			#head{
+				text-align: center;
+			}
+			p{
+				font-size: 18px;
+			}
+			#box{
+				width: 800px;
+				height: 450px;
+				border: 1px solid black;
+				margin: 30px auto;
+				position: relative;
+				left: 0;
+				top: 0;
+			}
+			#text{
+				width:150px;
+				height: 100px;
+				background-color: lightgoldenrodyellow;
+				border: 1px solid black;
+				position: absolute;
+				left: -152px;
+				top: 0;
+			}
+			#qq img{
+				position: absolute;
+				top: -23px;
+				left: 0;
+			}
+			#qq{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="head">
+			<h2>你的鼠标有多快？</h2>
+			<p>
+				游戏说明：点击“开始游戏”，随机掉下QQ表情，点中它，千万别让它掉下去！！
+			</p>
+			<input type="button"value="点击开始" id="btn" />
+		</div>
+		<div id="box">
+			<div id="text">
+				<p>得分：<a>0</a> 分</p>
+	  			<p>失分：<a>0</a> 分</p>
+			</div>
+			<div id="qq">
+				<img src="img/1.png" />
+			</div>
+		</div>
+	</body>
+	<script>
+		var btn = $("#btn");
+		var img = $("img",$("#qq"))[0];
+		var box = $("#box");
+		var as = $("a",$("#text"));
+//		console.log(as);
+		//加快速度
+		var speedTime = 5000;
+		var m =0;
+		var n=0;
+		function zero(){
+			var speedTime = 100;
+			var m =0;
+			var n=0;
+			img.style.top='-26px';
+			as[0].innerHTML = 0;
+			as[1].innerHTML = 0;
+		}
+		function move(){
+			//0 - 800 的随机数
+			var l = Math.round( Math.random() * 800 );
+			//1-11的随机数
+			var num = Math.round( Math.random() * 10 )+1;
+			//改变img的路径，left
+			img.style.left = l+"px";
+			img.style.top=0;
+			img.src = "img/"+num+".png";
+			//图片运动
+			speedTime -=100;
+//			if( speedTime <= 0 ) speedTime = 100;
+			mTween(img, "top", 426, speedTime, 'linear',function(){
+				shake(box,'top',30,function(){//抖动
+					//记录失分
+					m++;
+					as[1].innerHTML = m;
+					if(m>=10){
+						alert("game over");
+						zero();
+					}else{
+						move();
+					}
+					
+				});
+			});
+		}
+		//点击事件
+		btn.onclick = function(){
+//			this.disabled = true;
+			move();
+			
+		}
+		//图片点击事件
+		var stop = false;
+		img.onclick = function(){
+			if(!stop){
+				stop =true;
+				clearInterval(this.top);
+				img.src = "img/bad.png";
+				shake(this,"left",20,function (){
+					n++;
+					as[0].innerHTML = n;
+					if(n>=10){
+						alert("过关了");
+						zero();
+					}else{
+						move();	
+					}
+					stop = false;
+				});
+			}
+			
+		}
+	</script>
+</html>

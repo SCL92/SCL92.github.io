@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		URL：http://item.taobao.com /item.htm?a=1&b=2&c=&d=xxx&e,
+		提取URL中的各个GET参数(参数名和 参数个数不确定)
+		将其按key-value形式返回到一个json结构中
+		如{a:’1′, b:’2′ , c:”, d:’xxx’, e:undefined}
+	</body>
+	<script>
+		var str="URL：http://item.taobao.com /item.htm?a=1&b=2&c=&d=xxx&e";
+		//?第36位
+//		console.log(str.indexOf("?"));
+		//截取?开始到最后一位的之间的字符串
+		var Text = str.substring(str.indexOf("?")+1,str.length)	
+		console.log(Text);
+		//以&为分隔符，分成数组
+		var Split = Text.split('&');
+		console.log(Split)
+		var Obj={};
+		for(var i=0;i<Split.length;i++){
+			var Key = Split[i].split("=")[0];
+			var Value = Split[i].split("=")[1];
+			Obj[Key]=Value;
+			console.log(Key)
+			console.log(Value)
+		}
+		console.log(Obj)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		console.log(str.indexOf("?"))//36位
+//		console.log(str.indexOf("="))//38位
+//		
+//		console.log(str.slice(37,38))//a
+//		
+//		console.log(str.indexOf("=",39))//42	
+//		
+//		console.log(str.slice(39,42))//1&b
+//		
+//		console.log(str.indexOf("=",43))//46
+//		
+//		console.log(str.slice(43,46))//2&c
+//		
+//		console.log(str.indexOf("=",47))//49
+//		
+//		console.log(str.slice(47,49))//&d
+//		
+//		console.log(str.length)//55
+//		
+//		console.log(str.slice(50,55))//xxx&e
+		
+	</script>
+</html>

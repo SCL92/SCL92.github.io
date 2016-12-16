@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			input{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border: none;
+			}
+			.box{
+				width:400px;
+				height:620px;
+				background:url(img/未标题-1.png) repeat;
+				margin: auto;
+				border: 1px solid #fff;
+				position: relative;
+			}
+			.content{
+				width: 100%;
+				height:78px;
+				margin-top:-1px;
+				background: url(img/content.png) no-repeat;
+				background-size:cover;
+				background-color: black;
+			}
+			.text{
+				width: 200px;
+				height: 30px;
+				border:1px solid #583700;
+				margin-top: 50px;
+				margin-left:90px;
+				background-color: #f3ca22;
+				padding-left: 10px;
+				box-sizing: border-box;
+				border-radius: 3px;
+				color: #674659;
+			}
+			.btn{
+				width: 200px;
+				height: 30px;
+				background-color:black ;
+				margin:20px 90px;
+				color:#f3ca22 ;
+				border-radius: 3px;
+				cursor: pointer;
+			}
+			.phone{
+				width: 104px;
+				height: 302px;
+				background: url(img/2.png) no-repeat;
+				background-size:cover ;
+				margin-left: 100px;
+				margin-top: 50px;
+				position: relative;
+			}
+			.anm{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				background: url(img/3.png) no-repeat;
+				background-size:cover ;
+				left:135px;
+				bottom:1px;
+				transform:translateY(0px);
+				animation:.2s ran ease-in infinite alternate;
+			}
+			.logo{
+				width:300px;
+				height:100px;
+				background: url(img/4.png) no-repeat;
+				background-size:cover;
+				position: absolute;
+				left:10px;
+				top:100px;
+				z-index: 2;
+				transform:translateX(0px);
+				animation:.35s move ease-out infinite alternate;
+				
+			}
+			.knife{
+				width:24px;
+				height: 47px;
+				background: url(img/knife.png) no-repeat;
+				background-size:cover;
+				position: absolute;
+				right:-10px;
+				bottom: 10px;
+				transform:rotate(360deg);
+				transform-origin: 0 40px;
+				animation:.1s jump ease-in infinite alternate;
+			}
+			@keyframes move{
+				0%{
+					transform: translateX(30px);
+				}
+				100%{
+					transform: translateX(10px);
+				}
+			}
+			@keyframes jump{
+				0%{
+					transform:rotate(0deg);
+				}
+				100%{
+					transform:rotate(180deg);
+				}
+			}@keyframes ran{
+				0%{
+					transform:translateY(-10px);
+				}
+				100%{
+					transform:translateY(0px);
+				}
+			}
+		</style>
+	</head>
+	<body style="background-color: ;">
+		<div class="box">
+			<div class="logo"></div>
+			<div class="phone">
+				<div class="anm">
+					<div class="knife">
+						
+					</div>
+				</div>
+			</div>
+			<div class="content"></div>
+			<input type="text" placeholder="我是js大拿" class="text"></input>
+			<input type="button" value="来一发" class="btn" />
+		</box>
+			
+	</body>
+</html>

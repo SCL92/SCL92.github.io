@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		URL：http://item.taobao.com /item.htm?a=1&b=2&c=&d=xxx&e,
+		提取URL中的各个GET参数(参数名和 参数个数不确定)
+		将其按key-value形式返回到一个json结构中
+		如{a:’1′, b:’2′ , c:”, d:’xxx’, e:undefined}
+	</body>
+	<script>
+		var str="URL：http://item.taobao.com /item.htm?a=1&b=2&c=&d=xxx&e=99&f=555&g=565";
+		//获取?的位置   36
+		console.log(str.indexOf("?"))
+		//获取str的总长度	55
+		console.log(str.length)
+		//截取指定的长度
+		var Des=str.substring(str.indexOf("?")+1,str.length);
+		console.log(Des)
+		//分割数据
+		var Split = Des.split("&");
+		console.log(Split)
+		var Obj={};
+		for(var i=0;i<Split.length;i++){
+			var Key = Split[i].split("=")[0];
+			var Value = Split[i].split("=")[1];
+			Obj[Key]=Value
+		}
+		console.log(Obj)
+	</script>
+</html>
